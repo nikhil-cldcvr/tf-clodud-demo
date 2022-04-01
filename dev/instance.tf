@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "internal-org"
+
+    workspaces {
+      name = "tf-clodud-demo"
+    }
+  }
+}
+
 resource "google_compute_instance" "default" {
   name         = "test"
   project = "devops-sandbox-20200519"
