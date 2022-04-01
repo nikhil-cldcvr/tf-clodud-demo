@@ -1,6 +1,6 @@
 resource "google_compute_instance" "default" {
   name         = "test"
-  project = var.project
+  project = "devops-sandbox-20200519"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
     network_interface {
